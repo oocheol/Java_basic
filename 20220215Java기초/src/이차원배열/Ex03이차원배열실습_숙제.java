@@ -10,12 +10,14 @@ public class Ex03이차원배열실습_숙제 {
 		
 		int[][] arr = new int[3][5];
 
+		// 정답
 		arr[0][0] = 1;
 		arr[0][1] = 4;
 		arr[0][2] = 3;
 		arr[0][3] = 2;
 		arr[0][4] = 1;
 		
+		// 문항별 배점
 		arr[2][0] = 10;
 		arr[2][1] = 20;
 		arr[2][2] = 30;
@@ -30,16 +32,16 @@ public class Ex03이차원배열실습_숙제 {
 		}
 		System.out.println("정답확인");
 		
-		int sum = 0;
+		int score = 0;
 		for (int i = 0; i<5;i++) {
 			if (arr[0][i] == arr[1][i]) {
 				System.out.print("O ");
-				sum += arr[2][i];
+				score += arr[2][i];
 			} else {
 				System.out.print("X ");
 			}
 		}
-		System.out.println("총점 : "+sum);
+		System.out.println("총점 : "+score);
 		
 	}
 
