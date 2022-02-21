@@ -17,6 +17,7 @@ public class PiggyBank {
 	// 리턴타입 없음
 	public void deposit(int money) {
 		// 필드에 있는 money 매개변수로 받아온 money 누적!
+		
 	}
 	
 	// - 돈을 출금하는(withdraw)
@@ -24,12 +25,14 @@ public class PiggyBank {
 	// 리턴타입 없음
 	public void withdraw(int money) {
 		// 필드에 있는 money를 매개변수로 받아온 money 빼면서 누적!
+		
 	}
 	// - 잔액을 보여주기(showMoney)
 	// 매개변수 없음
 	// 리턴타입 없음
 	public void showMoney() {
-		// 조자연님의 잔액이 ______ 원 있습니다.
+		// 조자연님의 잔액이 ______ 원 있습니다. <<ㅡ 출력
+		
 	}
 
 }
