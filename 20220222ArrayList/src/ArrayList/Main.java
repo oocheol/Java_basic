@@ -27,15 +27,25 @@ public class Main {
 		// 2. 데이터 가져오기
 		System.out.println(list.get(1));
 		
+		// 3. 데이터 삭제하기
+		list.remove(0); // 소고기 지우기
 		
+		System.out.println(list.get(1));
 		
+		// 4. 데이터 특정위치에 추가하기
+		list.add(0,"탕수육");
 		
+		System.out.println(list.get(0));
 		
+		// 5. 모든 데이터 출력
+		for(int i=0;i<list.size();i++) {
+			System.out.println(list.get(i));
+		}
 		
+		// 6. 모든 데이터 삭제하기
+		list.clear();
 		
-		
-		
-		
+		System.out.println(list.size());
 		
 		
 		
