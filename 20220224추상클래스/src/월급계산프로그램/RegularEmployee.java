@@ -6,15 +6,17 @@ public class RegularEmployee extends Employee {
 	private int bonus;
 	
 	// 2. ¸Þ¼Òµå
+	
 	public RegularEmployee(String empno, String name, int pay, int bonus) {
-		this.empno = empno;
-		this.name = name;
-		this.pay = pay;
+		super(empno, name, pay);
 		this.bonus = bonus;
 	}
-
+	
+	@Override
 	public int getMoneyPay() {
 		return (pay + bonus) / 12;
 	}
+
+	
 
 }
