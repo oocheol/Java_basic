@@ -15,6 +15,13 @@ public class Ex01개념 {
 	// 인터페이스 예) JDBC
 	// : Java와 DB를 연결하는 API (Application Programming Interface)
 	
+	// interface > 필드(상수), 메소드(추상메소드)만 가능하므로 
+	// 해당 키워드(final, abstract)는 생략가능!
+	
+	// 생략가능한 키워드 2개 (시험)
+	// - final
+	// - abstract
+	
 	
 	
 	
