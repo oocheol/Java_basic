@@ -80,6 +80,7 @@ public class ex01회원가입 {
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println("DB관련 오류 발생");
+			
 		} finally {
 			try {
 				if (conn != null) // if 실행문장이 한줄이면 중괄호 생략 가능!
