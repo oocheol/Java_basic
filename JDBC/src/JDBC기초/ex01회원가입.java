@@ -4,11 +4,30 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class ex01회원가입 {
 
 	public static void main(String[] args) {
 		Connection conn = null;
+		PreparedStatement psmt = null;
+		Scanner sc = new Scanner(System.in);
+		
+		// 회원가입을 위한 데이터가 총 몇개?
+		// -> 4개!(id, pw, name, age) -> 각각의 자료형은?
+		System.out.print("ID 입력 >> ");
+		String id = sc.next();
+		System.out.print("PW 입력 >> ");
+		String pw = sc.next();
+		System.out.print("이름 입력 >> ");
+		String name = sc.next();
+		System.out.print("나이 입력 >> ");
+		int age = sc.nextInt();
+		
+		
+		
+		
+		
 
 		// JDBC
 		// -> Java DataBase Connectivity
@@ -50,11 +69,22 @@ public class ex01회원가입 {
 			
 			// 2. Query문(SQL) 전송
 			// 2-1) SQL문장 준비하기
-			String sql = "insert into aimember values('jy123','12345','손지영',20)";
+			String sql = "insert into aimember values(?,?,?,?)";
 			
 			// 2-2) SQL문 전송
-			PreparedStatement psmt = conn.prepareStatement(sql);
+			psmt = conn.prepareStatement(sql);
 			// --> SQL구문을 양식에 맞게 담아주는 작업
+			
+			// ?인자를 채워주는 작업(사용자가 입력한 데이터로)
+			// 여기서 Index는 1부터 시작(0부터 X) 
+			psmt.setString(1, id);
+			psmt.setString(2, pw);
+			psmt.setString(3, name);
+			psmt.setInt(4, age);
+			// 전송하기 전에 ?인자를 전부 채워주기!!!!!!!!
+			
+			
+			
 			int row = psmt.executeUpdate();
 			// SQL문 전송 -> 영향을 받은 행의 갯수로 결과를 받아옴!
 			
@@ -83,8 +113,23 @@ public class ex01회원가입 {
 			
 		} finally {
 			try {
+				// 항상 자원을 반납할 때는 열어준 순서의 역순을 반납하자!
+				if (psmt != null) // ctrl + f로 찾기 가능!
+					psmt.close();
+				
 				if (conn != null) // if 실행문장이 한줄이면 중괄호 생략 가능!
 					conn.close();
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				
 			} catch (SQLException e) {
 				e.printStackTrace();
