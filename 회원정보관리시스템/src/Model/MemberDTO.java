@@ -55,7 +55,6 @@ public class MemberDTO {
 		return pw;
 	}
 
-
 	
 
 	public void setPw(String pw) {
