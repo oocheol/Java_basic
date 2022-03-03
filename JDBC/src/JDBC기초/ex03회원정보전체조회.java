@@ -39,7 +39,8 @@ public class ex03회원정보전체조회 {
 			rs = psmt.executeQuery();
 			System.out.println("아이디\t 이름\t나이");
 			while (rs.next()) {
-
+				// 데이터가 없다면 rs.next()가 false > 반복문 종료!
+				
 				String id = rs.getString("id");
 				String name = rs.getString("name");
 				int age = rs.getInt("age");
