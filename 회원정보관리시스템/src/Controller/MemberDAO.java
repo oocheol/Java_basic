@@ -33,7 +33,7 @@ public class MemberDAO {
 			e.printStackTrace();
 		}
 	}
-	
+
 	// 데이터베이스 자원 반납 메소드
 	private void getClose() {
 		try {
@@ -47,15 +47,13 @@ public class MemberDAO {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	
+
 	// 2. 메소드 (기능들을 분리)
 	// 로그인 -> Main클래스에서 사용해야하는 메소드!
 	public MemberDTO login(MemberDTO dto) {
 		try {
 			getConn();
-			
+
 			String sql = "select * from aimember where id = ? and pw = ?";
 
 			psmt = conn.prepareStatement(sql);
@@ -120,7 +118,7 @@ public class MemberDAO {
 			psmt = conn.prepareStatement(sql);
 
 			rs = psmt.executeQuery();
-			
+
 			while (rs.next()) {
 				String id = rs.getString("id");
 				String name = rs.getString("name");
@@ -150,7 +148,7 @@ public class MemberDAO {
 			PreparedStatement psmt = conn.prepareStatement(sql);
 			psmt.setNString(1, deleteDTO.getId());
 			psmt.setNString(2, deleteDTO.getPw());
-			
+
 			// delete, insert --> executeUpdate
 			cnt = psmt.executeUpdate();
 		} catch (SQLException e) {

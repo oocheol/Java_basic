@@ -6,18 +6,17 @@ public class MemberDTO {
 	// DTO
 	// Data Transfer Object
 	// getter, setter 전부 가지고 있는 객체
-	
+
 	// VO
 	// Value Object
 	// Read Only(읽기전용) --> setter 메소드가 없는 객체
-	
+
 	// 1. 필드
 	private String id;
 	private String pw;
 	private String name;
 	private int age;
-	
-	
+
 	// 2. 메소드
 	// - 모든 필드의 값을 채울 수 있는 생성자
 	public MemberDTO(String id, String pw, String name, int age) {
@@ -45,42 +44,34 @@ public class MemberDTO {
 		return id;
 	}
 
-
 	public void setId(String id) {
 		this.id = id;
 	}
-
 
 	public String getPw() {
 		return pw;
 	}
 
-	
-
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
-
 
 	public String getName() {
 		return name;
 	}
 
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 
 	public int getAge() {
 		return age;
 	}
 
-
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+
 	@Override
 	public String toString() {
 		// 출력문 안에 해당하는 클래스 레퍼런스 변수가 들어가게 되면 자동으로 실행되는 메소드
@@ -91,15 +82,5 @@ public class MemberDTO {
 		}
 		return id + " \t " + name + " \t " + age;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
