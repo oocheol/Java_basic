@@ -255,7 +255,8 @@ public class Main {
 							System.out.println();
 							System.out.println("|￣￣￣￣￣￣￣|\r\n" + "|  게임규칙  | \r\n" + "|＿＿＿＿＿＿＿| \r\n"
 									+ "(\\__/) || \r\n" + "(•ㅅ•). || \r\n" + "/ . . . .づ");
-							System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ \r\n"
+							System.out.println(
+									  "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ \r\n"
 									+ "│1. 문제는 총 10 문제, 랜덤으로 출력           |\r\n"
 									+ "|2. 정답과 정확하게 일치(띄어쓰기 포함)          |\r\n"
 									+ "|3. 두번 틀릴 경우 힌트 자동 제공              |\r\n"
@@ -273,7 +274,7 @@ public class Main {
 							int cnt = 0;
 							int hint_cnt = 0;
 
-							for (int i = start; i <= start + 10; i++) {
+							for (int i = start; i < start + 10; i++) {
 								int r = arr[i];
 
 								for (int j = 1; j <= 2; j++) {
@@ -486,13 +487,13 @@ public class Main {
 				System.out.println("░▀░░░▀░▀▀▀░▀▀▀░░▀░░▀░▀░▀░░▀░▀▀▀░");
 			}
 		}
-		System.out.println("\t" +"☆♬○♩●♪✧♩　　♩✧♪●♩○♬☆ ☆♬○♩●♪✧♩　　♩✧♪●♩○♬☆");
+		System.out.println("\t" +"☆♬○♩●♪✧♩　　♩✧♪●♩○♬☆ ☆♬○♩●♪✧♩　　♩✧♪●♩○♬☆　　♩✧♪●♩○♬☆");
 		System.out.println();
 		System.out.println("\t" + "░░█▀▀▀░█▀█░█▄░▄█░█▀▀░" + "░░█▀▀█░█░░░█░█▀▀░█▀█░\r\n" 
 					   	+ "\t"  + "░░█ ▀█░█▀█░█░▀░█░█▀▀░" + "░░█░░█░░█░█░░█▀▀░██▀░\r\n"
 					   	+ "\t"  + "░░▀▀▀ ░▀░▀░▀░░░▀░▀▀▀░" + "░░▀▀▀▀░░░▀░░░▀▀▀░▀░▀░\r\n");
 		System.out.println();
-		System.out.println("\t" +"☆♬○♩●♪✧♩　　♩✧♪●♩○♬☆ ☆♬○♩●♪✧♩　　♩✧♪●♩○♬☆");
+		System.out.println("\t" +"☆♬○♩●♪✧♩　　♩✧♪●♩○♬☆ ☆♬○♩●♪✧♩　　♩✧♪●♩○♬☆　　♩✧♪●♩○♬☆");
 
 	}
 
