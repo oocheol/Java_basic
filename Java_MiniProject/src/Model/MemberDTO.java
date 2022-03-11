@@ -18,7 +18,7 @@ public class MemberDTO {
 
 	@Override
 	public String toString() {
-		return id + "\t" + name + "\t" + score;
+		return id + "\t\t" + name + "\t\t" + score;
 	}
 
 	public MemberDTO(String id, String pw, String name) {

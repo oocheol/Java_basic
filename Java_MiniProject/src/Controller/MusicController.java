@@ -2,7 +2,6 @@ package Controller;
 
 import java.util.ArrayList;
 
-import Model.MusicVO;
 import Model.QuizDTO;
 import javazoom.jl.player.MP3Player;
 
@@ -19,6 +18,36 @@ public class MusicController {
 		mp3.play(quiz.get(i).getPath());
 
 
+	}
+
+	public void playSuccess() {
+		
+		if (mp3.isPlaying()) {
+			mp3.stop();
+		}
+		mp3.play("C:/hint/성공.mp3");
+		
+		
+	}
+	public void playFail() {
+		
+		if (mp3.isPlaying()) {
+			mp3.stop();
+		}
+		mp3.play("C:/hint/실패.mp3");
+		
+		
+	}
+	
+	public void playBGM() {
+		
+		
+			if (mp3.isPlaying()) {
+				mp3.stop();
+			}
+			mp3.play("C:/hint/게임bgm.mp3");
+		
+		
 	}
 
 	public void stopMusic() {

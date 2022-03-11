@@ -152,7 +152,8 @@ public class MemberDAO {
 
 			rs = psmt.executeQuery();
 
-			System.out.println("아이디" + "\t닉네임" + "\t점수");
+			System.out.println("아이디" + "\t\t닉네임" + "\t\t점수");
+			System.out.println("---------------------------------------");
 
 			while (rs.next()) {
 				String ID = rs.getString("ID");
